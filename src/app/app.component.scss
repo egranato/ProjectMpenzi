@@ -1,0 +1,97 @@
+nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 55px;
+  width: 100%;
+  background-color: rgba(243, 243, 243, 0.6);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  box-shadow: 0px -1px 4px 0px rgba(204, 204, 204, 0.5);
+  a {
+    position: relative;
+    height: 75%;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: #333333;
+    padding: 10px;
+    box-sizing: border-box;
+    p {
+      z-index: 9999;
+    }
+  }
+  a.active {
+    height: 100%;
+    font-size: 22px;
+  }
+  a::after,
+  a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    transition: all 0.3s ease;
+    opacity: 0.9;
+  }
+  a::after {
+    right: 0;
+    width: 50%;
+    height: 0;
+    background: rgb(204, 204, 204);
+    background: linear-gradient(90deg, rgba(204, 204, 204, 1) 50%, rgba(243, 243, 243, 1) 100%);
+  }
+  a::before {
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: rgb(243, 243, 243);
+    background: linear-gradient(90deg, rgba(243, 243, 243, 1) 0%, rgba(204, 204, 204, 1) 50%);
+  }
+  a.active::after,
+  a:hover::after {
+    height: 100%;
+  }
+  a.active::before,
+  a:hover::before {
+    width: 50%;
+  }
+}
+
+main {
+  margin: 5px 0 55px;
+  height: calc(100% - 55px);
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: #FEFEFE;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  .container {
+    width: calc(100% - 15px);
+    height: auto;
+  }
+}
+
+@media only screen and (min-width: 480px) {
+  nav {
+    top: 0;
+    box-shadow: 0px 1px 4px 0px rgba(204, 204, 204, 0.5);
+  }
+  main {
+    margin: 60px 0 5px;
+    .container {
+      width: calc(100% - 150px);
+    }
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  main .container {
+    width: calc(100% - 300px);
+  }
+}

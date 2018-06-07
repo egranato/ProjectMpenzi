@@ -1,0 +1,124 @@
+.post {
+  position: relative;
+  float: left;
+  width: 100%;
+  box-shadow: 0 3px 3px 3px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+  .main-img {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    float: left;
+    img {
+      width: 100%;
+    }
+  }
+  .post-info {
+    width: 100%;
+    padding: 15px;
+    height: 150px;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+    float: left;
+    .title {
+      height: 20px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      font-weight: bold;
+      font-size: 18px;
+      position: relative;
+    }
+    .body {
+      width: 100%;
+      height: 100px;
+      padding: 3px 3px 0 3px;
+      position: relative;
+      p {
+        position: relative;
+        font-size: 14px;
+        overflow: hidden;
+        height: calc(100% - 3px);
+        width: calc(100% - 6px);
+        text-overflow: ellipsis;
+      }
+    }
+  }
+  .action-buttons {
+    height: 50px;
+    width: calc(100% - 30px);
+    margin: 0 15px;
+    position: relative;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    button {
+      height: 40px;
+      width: 45%;
+    }
+    button:hover {
+      cursor: pointer;
+    }
+    .see-more {
+      background-color: rgba(204, 204, 204, 0.7);
+    }
+    .share {
+      background-color: rgba(204, 204, 204, 0.9);
+    }
+  }
+}
+
+@media only screen and (min-width: 750px) {
+  .post {
+    .main-img {
+      height: 300px;
+    }
+    .post-info {
+      height: 200px;
+      .title {
+        height: 35px;
+        font-size: 30px;
+        width: 70%;
+      }
+      .body {
+        height: 130px;
+        p {
+          font-size: 18px;
+        }
+      }
+    }
+    .action-buttons {
+      position: absolute;
+      width: 30%;
+      margin: 0;
+      height: 40px;
+      top: 255px;
+      right: 5px;
+      button {
+        height: 40px;
+        width: 49%;
+      }
+      .share {
+        background-color: rgba(204, 204, 204, 0.7);
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .post {
+    .main-img {
+      height: 400px;
+    }
+    .action-buttons {
+      top: 355px;
+    }
+  }
+}
