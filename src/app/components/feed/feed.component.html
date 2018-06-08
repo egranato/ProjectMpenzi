@@ -5,6 +5,16 @@
   <div class="post-info">
     <div class="title">
       <h5>{{post.title}}</h5>
+      <div class="secondary">
+        <div class="date">
+          <i class="fas fa-calendar-alt"></i>
+          <h6>{{post.date.toDateString()}}</h6>
+        </div>
+        <div class="place">
+          <i class="fas fa-map-marker"></i>
+          <h6>{{post.place}}</h6>
+        </div>
+      </div>
     </div>
     <div class="body">
       <p>{{post.body}}</p>

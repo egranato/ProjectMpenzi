@@ -19,6 +19,15 @@ export class FeedComponent implements OnInit {
           data.results.forEach((post) => {
             this.posts.push(new Post(post));
           });
+          for (let i = 0; i < this.posts.length; ++i) {
+            const temp = this.posts[i];
+            let j = i - 1;
+            while (j >= 0 && this.posts[j].date > temp.date) {
+              this.posts[j + 1] = this.posts[j];
+              --j;
+            }
+            this.posts[j + 1] = temp;
+          }
         },
         (failure: any) => {
           console.error(failure);

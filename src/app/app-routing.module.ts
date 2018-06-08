@@ -8,6 +8,11 @@ import { ArchiveComponent } from './components/posts/archive/archive.component';
 const routes: Routes = [
   {
     path: '',
+    redirectTo: '/feed',
+    pathMatch: 'full'
+  },
+  {
+    path: 'feed',
     component: FeedComponent
   }, {
     path: 'posts',
@@ -21,6 +26,11 @@ const routes: Routes = [
         component: PostComponent
       }
     ]
+  },
+  {
+    path: '**',
+    redirectTo: '/feed',
+    pathMatch: 'full'
   }
 ];
 

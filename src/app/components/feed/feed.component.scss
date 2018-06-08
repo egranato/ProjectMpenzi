@@ -21,20 +21,41 @@
   .post-info {
     width: 100%;
     padding: 15px;
-    height: 150px;
+    height: 175px;
     box-sizing: border-box;
     overflow: hidden;
     position: relative;
     float: left;
     .title {
-      height: 20px;
+      height: 45px;
       width: 100%;
       display: flex;
-      align-items: center;
+      flex-direction: column;
+      align-items: flex-start;
       justify-content: flex-start;
       font-weight: bold;
       font-size: 18px;
       position: relative;
+      .secondary {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        font-weight: normal;
+        font-size: 14px;
+        position: relative;
+        height: 28px;
+        .date, .place {
+          position: relative;
+          display: flex;
+          i {
+            margin-right: 5px;
+          }
+        }
+        .date {
+          margin-right: 10px;
+        }
+      }
     }
     .body {
       width: 100%;
@@ -82,11 +103,15 @@
       height: 300px;
     }
     .post-info {
-      height: 200px;
+      height: 235px;
       .title {
-        height: 35px;
+        height: 70px;
         font-size: 30px;
         width: 70%;
+        .secondary {
+          height: 40px;
+          font-size: 18px;
+        }
       }
       .body {
         height: 130px;
