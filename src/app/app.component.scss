@@ -95,3 +95,9 @@ main {
     width: calc(100% - 300px);
   }
 }
+
+@media only screen and (min-width: 1225px) {
+  main .container {
+    width: calc(100% - 400px);
+  }
+}

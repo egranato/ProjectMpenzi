@@ -1,71 +1,13 @@
-<div class="post">
+<div class="post" *ngFor="let post of posts">
   <div class="main-img">
-    <img src="https://www.wallsauce.com/uploads/wallsauce-com/images/products/web/severine-pineaux/large/arbre-dragon.jpg" alt="Post Image">
+    <img [src]="post.image" alt="Post Image">
   </div>
   <div class="post-info">
     <div class="title">
-      <h5>Lorem Ipsum</h5>
+      <h5>{{post.title}}</h5>
     </div>
     <div class="body">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec dolor sed felis sodales varius. Nunc tristique scelerisque
-        varius. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam at tellus
-        lacus. Nullam neque enim, convallis sed elementum vel, tempus eget felis. Nunc commodo justo vel fermentum tempor.
-        Nunc faucibus eleifend arcu, a varius tellus sodales at. Sed euismod fermentum sapien, nec rhoncus lacus feugiat
-        eget. Fusce gravida in tortor ac varius. Duis dignissim laoreet mauris. Etiam condimentum pulvinar accumsan.</p>
-    </div>
-  </div>
-  <div class="action-buttons">
-    <button class="share">
-      Share
-      <i class="fas fa-share"></i>
-    </button>
-    <button class="see-more">
-      See More
-      <i class="fas fa-external-link-alt"></i>
-    </button>
-  </div>
-</div>
-<div class="post">
-  <div class="main-img">
-    <img src="https://www.wallsauce.com/uploads/wallsauce-com/images/products/web/severine-pineaux/large/arbre-dragon.jpg" alt="Post Image">
-  </div>
-  <div class="post-info">
-    <div class="title">
-      <h5>Lorem Ipsum</h5>
-    </div>
-    <div class="body">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec dolor sed felis sodales varius. Nunc tristique scelerisque
-        varius. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam at tellus
-        lacus. Nullam neque enim, convallis sed elementum vel, tempus eget felis. Nunc commodo justo vel fermentum tempor.
-        Nunc faucibus eleifend arcu, a varius tellus sodales at. Sed euismod fermentum sapien, nec rhoncus lacus feugiat
-        eget. Fusce gravida in tortor ac varius. Duis dignissim laoreet mauris. Etiam condimentum pulvinar accumsan.</p>
-    </div>
-  </div>
-  <div class="action-buttons">
-    <button class="share">
-      Share
-      <i class="fas fa-share"></i>
-    </button>
-    <button class="see-more">
-      See More
-      <i class="fas fa-external-link-alt"></i>
-    </button>
-  </div>
-</div>
-<div class="post">
-  <div class="main-img">
-    <img src="https://www.wallsauce.com/uploads/wallsauce-com/images/products/web/severine-pineaux/large/arbre-dragon.jpg" alt="Post Image">
-  </div>
-  <div class="post-info">
-    <div class="title">
-      <h5>Lorem Ipsum</h5>
-    </div>
-    <div class="body">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec dolor sed felis sodales varius. Nunc tristique scelerisque
-        varius. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam at tellus
-        lacus. Nullam neque enim, convallis sed elementum vel, tempus eget felis. Nunc commodo justo vel fermentum tempor.
-        Nunc faucibus eleifend arcu, a varius tellus sodales at. Sed euismod fermentum sapien, nec rhoncus lacus feugiat
-        eget. Fusce gravida in tortor ac varius. Duis dignissim laoreet mauris. Etiam condimentum pulvinar accumsan.</p>
+      <p>{{post.body}}</p>
     </div>
   </div>
   <div class="action-buttons">

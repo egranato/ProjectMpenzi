@@ -1,11 +1,26 @@
-import {NgModule} from '@angular/core';
-import {Routes, RouterModule} from '@angular/router';
-import {FeedComponent} from './components/feed/feed.component';
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+import { FeedComponent } from './components/feed/feed.component';
+import { PostsComponent } from './components/posts/posts.component';
+import { PostComponent } from './components/posts/post/post.component';
+import { ArchiveComponent } from './components/posts/archive/archive.component';
 
-const routes : Routes = [
+const routes: Routes = [
   {
     path: '',
     component: FeedComponent
+  }, {
+    path: 'posts',
+    component: PostsComponent,
+    children: [
+      {
+        path: '',
+        component: ArchiveComponent
+      }, {
+        path: ':id',
+        component: PostComponent
+      }
+    ]
   }
 ];
 
@@ -13,4 +28,4 @@ const routes : Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
