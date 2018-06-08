@@ -11,6 +11,8 @@ import { PostsComponent } from './components/posts/posts.component';
 import { PostComponent } from './components/posts/post/post.component';
 import { ArchiveComponent } from './components/posts/archive/archive.component';
 import { ApiService } from './services/api.service';
+import { DatesComponent } from './components/posts/archive/dates/dates.component';
+import { PlacesComponent } from './components/posts/archive/places/places.component';
 
 
 @NgModule({
@@ -19,7 +21,9 @@ import { ApiService } from './services/api.service';
     FeedComponent,
     PostsComponent,
     PostComponent,
-    ArchiveComponent
+    ArchiveComponent,
+    DatesComponent,
+    PlacesComponent
   ],
   imports: [
     BrowserModule,
