@@ -1,4 +1,5 @@
 export class Post {
+  id: number;
   title: string;
   body: string;
   date: Date;
@@ -7,6 +8,7 @@ export class Post {
   constructor(
     post: any
   ) {
+    this.id = post.id;
     this.title = post.title;
     this.body = post.body;
     this.date = new Date(post.date);

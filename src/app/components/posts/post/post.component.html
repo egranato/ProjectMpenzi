@@ -1,1 +1,15 @@
-{{id}}
+<div class="post">
+  <h3 class="title">{{post?.title}}</h3>
+  <h4 class="secondary">
+    <a href="">
+      <i class="fas fa-calendar-alt"></i>
+      <h6>{{post?.date.toDateString()}}</h6>
+    </a>
+    <a href="">
+      <i class="fas fa-map-marker"></i>
+      <h6>{{post?.place}}</h6>
+    </a>
+  </h4>
+  <img *ngIf="post?.image" [src]="post?.image" alt="Post Visual">
+  <p>{{post?.body}}</p>
+</div>

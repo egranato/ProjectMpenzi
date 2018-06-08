@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../../services/api.service';
 import { Post } from '../../data/post';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-feed',
@@ -9,7 +10,11 @@ import { Post } from '../../data/post';
 })
 export class FeedComponent implements OnInit {
   public posts: Array<Post>;
-  constructor(private api: ApiService) { }
+  constructor(private api: ApiService, private router: Router) { }
+
+  public goToPost(id: number): void {
+    this.router.navigate(['/posts', id]);
+  }
 
   ngOnInit() {
     this.posts = [];

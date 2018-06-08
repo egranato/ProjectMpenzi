@@ -1,0 +1,68 @@
+.post {
+  margin-top: 15px;
+  width: 100%;
+  height: auto;
+  position: relative;
+  * {
+    position: relative;
+  }
+  .title {
+    font-size: 22px;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  .secondary {
+    height: 30px;
+    font-size: 18px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    a {
+      text-decoration: none;
+      color: #333;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin-right: 10px;
+      i {
+        margin-right: 5px;
+      }
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
+  p {
+    margin: 15px 3px;
+    font-size: 18px;
+    line-height: 125%;
+    width: calc(100% - 6px);
+  }
+}
+
+@media only screen and (min-width: 750px) {
+  .post {
+    .title {
+      font-size: 30px;
+    }
+    .secondary {
+      font-size: 22px;
+    }
+    p {
+      font-size: 22px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .post {
+    p {
+      margin-bottom: 35px;
+    }
+  }
+}
