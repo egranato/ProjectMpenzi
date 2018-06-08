@@ -1,6 +1,13 @@
-<div class="nav">
-
-</div>
-<div class="content">
-  <router-outlet></router-outlet>
+<div class="archive">
+  <div class="nav">
+    <a routerLink="/posts/places" routerLinkActive="active">
+      <p>Places</p>
+    </a>
+    <a routerLink="/posts/dates" routerLinkActive="active">
+      <p>Dates</p>
+    </a>
+  </div>
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
 </div>

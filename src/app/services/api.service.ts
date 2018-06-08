@@ -21,6 +21,24 @@ export class ApiService {
       .pipe(retry(3));
   }
 
+  public getPlaces() {
+    return this.http
+      .get<Response>(`${environment.apiUrl}/places`, this.getHeaders())
+      .pipe(retry(3));
+  }
+
+  public getPlacePosts(id: number) {
+    return this.http
+      .get<Response>(`${environment.apiUrl}/places/${id}`, this.getHeaders())
+      .pipe(retry(3));
+  }
+
+  public getDatePosts(dateString: string) {
+    return this.http
+      .get<Response>(`${environment.apiUrl}/dates/${dateString}`, this.getHeaders())
+      .pipe(retry(3));
+  }
+
   private getHeaders() {
     return {
       headers: new HttpHeaders({

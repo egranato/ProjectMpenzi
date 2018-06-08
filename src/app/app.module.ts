@@ -10,10 +10,12 @@ import { FeedComponent } from './components/feed/feed.component';
 import { PostsComponent } from './components/posts/posts.component';
 import { PostComponent } from './components/posts/post/post.component';
 import { ArchiveComponent } from './components/posts/archive/archive.component';
-import { ApiService } from './services/api.service';
 import { DatesComponent } from './components/posts/archive/dates/dates.component';
 import { PlacesComponent } from './components/posts/archive/places/places.component';
-
+import { PlaceFeedComponent } from './components/posts/archive/places/place-feed/place-feed.component';
+import { DateFeedComponent } from './components/posts/archive/dates/date-feed/date-feed.component';
+import { ApiService } from './services/api.service';
+import { DataService } from './services/data.service';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { PlacesComponent } from './components/posts/archive/places/places.compon
     PostComponent,
     ArchiveComponent,
     DatesComponent,
-    PlacesComponent
+    PlacesComponent,
+    PlaceFeedComponent,
+    DateFeedComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +36,8 @@ import { PlacesComponent } from './components/posts/archive/places/places.compon
     FormsModule
   ],
   providers: [
-    ApiService
+    ApiService,
+    DataService
   ],
   bootstrap: [AppComponent]
 })
