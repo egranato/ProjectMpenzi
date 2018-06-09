@@ -4,6 +4,7 @@ export class Post {
   body: string;
   date: Date;
   place: string;
+  placeId: number;
   image: string;
   constructor(
     post: any
@@ -12,6 +13,7 @@ export class Post {
     this.title = post.title;
     this.body = post.body;
     this.date = new Date(post.date);
+    this.placeId = post.place_id;
     this.place = post.place || null;
     this.image = post.image || null;
   }

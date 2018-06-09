@@ -17,6 +17,14 @@ export class FeedComponent implements OnInit {
     this.router.navigate(['/posts', id]);
   }
 
+  public openDate(dateString: string): void {
+    this.router.navigate(['/posts', 'dates', dateString]);
+  }
+
+  public openPlace(id: number): void {
+    this.router.navigate(['/posts', 'places', id]);
+  }
+
   ngOnInit() {
     this.posts = [];
     this.api.getFeed()
