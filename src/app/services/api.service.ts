@@ -45,6 +45,12 @@ export class ApiService {
       .pipe(retry(3));
   }
 
+  public getAuthor() {
+    return this.http
+      .get<Response>(`${environment.apiUrl}/author`, this.getHeaders())
+      .pipe(retry(3));
+  }
+
   private getHeaders() {
     return {
       headers: new HttpHeaders({

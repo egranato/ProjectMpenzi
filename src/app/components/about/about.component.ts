@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../../services/api.service';
+import { Author } from '../../data/author';
 
 @Component({
   selector: 'app-about',
@@ -7,15 +8,15 @@ import { ApiService } from '../../services/api.service';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent implements OnInit {
-
+  public author: Author;
   constructor(private api: ApiService) { }
 
   ngOnInit() {
     this.api
       .getAuthor()
-      .subscibe(
+      .subscribe(
         (result: any) => {
-          console.log(result);
+          this.author = new Author(result);
         },
         (failure: any) => {
           console.error(failure);

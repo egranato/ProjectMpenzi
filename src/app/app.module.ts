@@ -17,6 +17,7 @@ import { DateFeedComponent } from './components/posts/archive/dates/date-feed/da
 import { AboutComponent } from './components/about/about.component';
 import { ApiService } from './services/api.service';
 import { DataService } from './services/data.service';
+import { AdminComponent } from './components/admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { DataService } from './services/data.service';
     PlacesComponent,
     PlaceFeedComponent,
     DateFeedComponent,
-    AboutComponent
+    AboutComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
