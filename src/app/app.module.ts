@@ -14,6 +14,7 @@ import { DatesComponent } from './components/posts/archive/dates/dates.component
 import { PlacesComponent } from './components/posts/archive/places/places.component';
 import { PlaceFeedComponent } from './components/posts/archive/places/place-feed/place-feed.component';
 import { DateFeedComponent } from './components/posts/archive/dates/date-feed/date-feed.component';
+import { AboutComponent } from './components/about/about.component';
 import { ApiService } from './services/api.service';
 import { DataService } from './services/data.service';
 
@@ -27,7 +28,8 @@ import { DataService } from './services/data.service';
     DatesComponent,
     PlacesComponent,
     PlaceFeedComponent,
-    DateFeedComponent
+    DateFeedComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

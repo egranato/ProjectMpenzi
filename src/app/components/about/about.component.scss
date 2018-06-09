@@ -1,0 +1,52 @@
+.shell {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  .author-image {
+    width: 100%;
+    height: auto;
+  }
+  .content-shell {
+    width: 100%;
+    height: auto;
+    .welcome-matt {
+      font-size: 28px;
+      width: 100%;
+      text-align: center;
+      margin: 20px 0;
+    }
+    p {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 16px;
+    }
+  }
+}
+
+@media only screen and (min-width: 750px) {
+  .shell {
+    flex-direction: row;
+    .author-image {
+      width: 30%;
+    }
+    .content-shell {
+      width: 70%;
+      .welcome-matt {
+        font-size: 32px;
+      }
+      p {
+        font-size: 22px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .shell {
+    .content-shell {
+      width: calc(70% - 50px);
+      margin: 0 25px;
+    }
+  }
+}

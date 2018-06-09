@@ -8,6 +8,7 @@ import { DatesComponent } from './components/posts/archive/dates/dates.component
 import { PlacesComponent } from './components/posts/archive/places/places.component';
 import { PlaceFeedComponent } from './components/posts/archive/places/place-feed/place-feed.component';
 import { DateFeedComponent } from './components/posts/archive/dates/date-feed/date-feed.component';
+import { AboutComponent } from './components/about/about.component';
 
 const routes: Routes = [
   {
@@ -53,6 +54,10 @@ const routes: Routes = [
         component: PostComponent
       }
     ]
+  },
+  {
+    path: 'about',
+    component: AboutComponent
   },
   {
     path: '**',
