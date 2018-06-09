@@ -1,3 +1,11 @@
-<p>
-  dates works!
-</p>
+<div class="items" [ngStyle]="getHeight()">
+  <div class="date-item" *ngFor="let date of dates">
+    <button (click)="openDate(date.date)">
+      <p>{{date.date}}</p>
+      <i class="fas fa-external-link-alt"></i>
+    </button>
+    <span class="vertical"></span>
+    <span class="horizontal"></span>
+  </div>
+  <div class="bar"></div>
+</div>

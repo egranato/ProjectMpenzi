@@ -33,9 +33,15 @@ export class ApiService {
       .pipe(retry(3));
   }
 
+  public getDates() {
+    return this.http
+      .get<Response>(`${environment.apiUrl}/posts/dates`, this.getHeaders())
+      .pipe(retry(3));
+  }
+
   public getDatePosts(dateString: string) {
     return this.http
-      .get<Response>(`${environment.apiUrl}/dates/${dateString}`, this.getHeaders())
+      .get<Response>(`${environment.apiUrl}/posts/dateposts?datestring=${dateString}`, this.getHeaders())
       .pipe(retry(3));
   }
 

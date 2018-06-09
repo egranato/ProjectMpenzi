@@ -1,0 +1,107 @@
+.items {
+  width: 100%;
+  height: auto;
+  min-height: 400px;
+  position: relative;
+  .date-item {
+    width: 50%;
+    position: relative;
+    float: left;
+    height: 50px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    button {
+      background-color: transparent;
+      border: none;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      p {
+        font-size: 14px;
+        margin-right: 5px;
+      }
+      i {
+        font-size: 10px;
+      }
+    }
+    button:hover {
+      cursor: pointer;
+      p {
+        text-decoration: underline;
+      }
+    }
+    .vertical, .horizontal {
+      background-color: #333;
+      position: absolute;
+      z-index: 9999;
+    }
+    .vertical {
+      width: 2px;
+      min-width: 2px;
+      height: 25px;
+      min-height: 25px;
+      top: 25px;
+    }
+    .horizontal {
+      width: 40%;
+      min-width: 40%;
+      height: 2px;
+      min-height: 2px;
+      top: 48px;
+    }
+  }
+  .date-item:nth-child(odd) {
+    margin-bottom: 50px;
+    .horizontal {
+      left: 50%;
+    }
+  }
+  .date-item:nth-child(even) {
+    margin-top: 50px;
+    .horizontal {
+      right: 50%;
+    }
+  }
+  .bar {
+    position: absolute;
+    height: 100%;
+    z-index: 9999;
+    width: 5px;
+    top: 0;
+    background-color: #333;
+    left: calc(50% - 2.5px);
+  }
+}
+
+@media only screen and (min-width: 750px) {
+  .items {
+    .date-item {
+      height: 100px;
+      button {
+        p {
+          font-size: 22px;
+          margin-right: 5px;
+        }
+        i {
+          font-size: 15px;
+        }
+      }
+      .vertical {
+        top: 35px;
+        height: 62px;
+        min-height: 62px;
+      }
+      .horizontal {
+        top: 95px;
+      }
+    }
+    .date-item:nth-child(odd) {
+      margin-bottom: 100px;
+    }
+    .date-item:nth-child(even) {
+      margin-top: 100px;
+    }
+  }
+}

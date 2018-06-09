@@ -8,7 +8,7 @@ export class DataService {
 
   public sortPostsByDate(posts: Array<Post>): Array<Post> {
     if (posts) {
-      return this.insertionSort(posts, 'date');
+      return this.reverseInsertionSort(posts, 'date');
     } else {
       return [];
     }
@@ -19,6 +19,19 @@ export class DataService {
       const temp = array[i];
       let j = i - 1;
       while (j >= 0 && array[j][key] > temp[key]) {
+        array[j + 1] = array[j];
+        --j;
+      }
+      array[j + 1] = temp;
+    }
+    return array;
+  }
+
+  private reverseInsertionSort(array: Array<any>, key: string): Array<any> {
+    for (let i = 0; i < array.length; ++i) {
+      const temp = array[i];
+      let j = i - 1;
+      while (j >= 0 && array[j][key] < temp[key]) {
         array[j + 1] = array[j];
         --j;
       }
