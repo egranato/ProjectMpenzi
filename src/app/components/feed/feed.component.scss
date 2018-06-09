@@ -55,6 +55,12 @@
         .date {
           margin-right: 10px;
         }
+        .date:hover, .place:hover {
+          cursor: pointer;
+          h6 {
+            text-decoration: underline;
+          }
+        }
       }
     }
     .body {
