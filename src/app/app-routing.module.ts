@@ -9,6 +9,7 @@ import { PlacesComponent } from './components/posts/archive/places/places.compon
 import { PlaceFeedComponent } from './components/posts/archive/places/place-feed/place-feed.component';
 import { DateFeedComponent } from './components/posts/archive/dates/date-feed/date-feed.component';
 import { AboutComponent } from './components/about/about.component';
+import { AdminComponent } from './components/admin/admin.component';
 
 const routes: Routes = [
   {
@@ -58,6 +59,10 @@ const routes: Routes = [
   {
     path: 'about',
     component: AboutComponent
+  },
+  {
+    path: 'admin',
+    component: AdminComponent
   },
   {
     path: '**',
