@@ -1,11 +1,11 @@
 <div class="post">
   <h3 class="title">{{post?.title}}</h3>
   <h4 class="secondary">
-    <a href="">
+    <a (click)="openDate(post?.date.toDateString())">
       <i class="fas fa-calendar-alt"></i>
       <h6>{{post?.date.toDateString()}}</h6>
     </a>
-    <a href="">
+    <a (click)="openPlace(post?.placeId)">
       <i class="fas fa-map-marker"></i>
       <h6>{{post?.place}}</h6>
     </a>

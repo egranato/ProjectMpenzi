@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ApiService } from '../../../services/api.service';
 import { Post } from '../../../data/post';
 
@@ -7,11 +7,23 @@ import { Post } from '../../../data/post';
 export class PostComponent implements OnInit {
   private id: string;
   public post: Post;
-  constructor(private route: ActivatedRoute, private api: ApiService) {
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+    private api: ApiService
+  ) {
     this
       .route
       .params
       .subscribe(params => this.id = params.id);
+  }
+
+  public openDate(dateString: string): void {
+    this.router.navigate(['/posts', 'dates', dateString]);
+  }
+
+  public openPlace(id: number): void {
+    this.router.navigate(['/posts', 'places', id]);
   }
 
   ngOnInit() {
