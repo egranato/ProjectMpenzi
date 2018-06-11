@@ -3,7 +3,14 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ApiService } from '../../../services/api.service';
 import { Post } from '../../../data/post';
 
-@Component({ selector: 'app-post', templateUrl: './post.component.html', styleUrls: ['./post.component.scss'] })
+@Component({
+  selector: 'app-post',
+  templateUrl: './post.component.html',
+  styleUrls: [
+    './post.component.scss',
+    '../../feed/feed.component.scss'
+  ]
+})
 export class PostComponent implements OnInit {
   private id: string;
   public post: Post;

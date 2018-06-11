@@ -1,3 +1,17 @@
-<p>
-  admin works!
-</p>
+<div class="login-box">
+  <h3>Welcome back!</h3>
+  <div class="input-group">
+    <input type="text" name="username" [(ngModel)]="user.username" (keydown)="unKeydown($event)">
+    <label for="username" [class.rise]="user.username?.length !== 0">User ID</label>
+  </div>
+  <div class="input-group">
+    <input type="password" name="password" [(ngModel)]="user.digest" (keydown)="diKeydown($event)" #digest>
+    <label for="password" [class.rise]="user.digest?.length !== 0">Passphrase</label>
+  </div>
+  <div class="button-track">
+    <button (click)="login()">
+      <p>Login</p>
+      <i class="fas fa-paper-plane"></i>
+    </button>
+  </div>
+</div>

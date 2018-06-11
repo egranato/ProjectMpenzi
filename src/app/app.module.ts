@@ -15,9 +15,12 @@ import { PlacesComponent } from './components/posts/archive/places/places.compon
 import { PlaceFeedComponent } from './components/posts/archive/places/place-feed/place-feed.component';
 import { DateFeedComponent } from './components/posts/archive/dates/date-feed/date-feed.component';
 import { AboutComponent } from './components/about/about.component';
+import { AdminComponent } from './components/admin/admin.component';
+import { WorkspaceComponent } from './components/admin/workspace/workspace.component';
 import { ApiService } from './services/api.service';
 import { DataService } from './services/data.service';
-import { AdminComponent } from './components/admin/admin.component';
+import { NewPostComponent } from './components/admin/workspace/new-post/new-post.component';
+import { EditComponent } from './components/admin/workspace/edit/edit.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +34,10 @@ import { AdminComponent } from './components/admin/admin.component';
     PlaceFeedComponent,
     DateFeedComponent,
     AboutComponent,
-    AdminComponent
+    AdminComponent,
+    WorkspaceComponent,
+    NewPostComponent,
+    EditComponent
   ],
   imports: [
     BrowserModule,

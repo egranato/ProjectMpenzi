@@ -1,0 +1,61 @@
+.login-box {
+  width: 100%;
+  height: auto;
+  box-shadow: 0 3px 3px 3px rgba(0, 0, 0, 0.05);
+  background-color: #FEFEFE;
+  position: relative;
+  h3 {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 15px;
+    padding-top: 15px;
+  }
+  .input-group {
+    padding-top: 15px;
+    position: relative;
+    width: 100%;
+    height: 50px;
+    input {
+      box-sizing: border-box;
+      position: relative;
+      padding: 10px 5px 0 5px;
+      background-color: transparent !important;
+      width: calc(100% - 10px);
+      margin: 0 5px;
+    }
+    label {
+      position: absolute;
+      top: 24px;
+      left: 10px;
+      transition: all 0.3s ease;
+    }
+    label.rise, input:focus ~ label {
+      top: -7px;
+      left: 5px;
+    }
+  }
+  .button-track {
+    width: calc(100% - 10px);
+    margin: 15px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 75px;
+  }
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    background-color: #FEFEFE;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 3px 3px 3px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+    height: 50px;
+    width: 125px;
+    font-size: 18px;
+  }
+}

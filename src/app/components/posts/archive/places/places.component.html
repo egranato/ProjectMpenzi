@@ -1,6 +1,8 @@
-<div class="place" *ngFor="let place of places">
-  <button (click)="openPlace(place.id)">
-    <p>{{place.name}}</p>
-    <i class="fas fa-external-link-alt"></i>
-  </button>
+<div class="place-shell">
+  <div class="place" *ngFor="let place of places">
+    <button (click)="openPlace(place.id)">
+      <p>{{place.name}}</p>
+      <i class="fas fa-external-link-alt"></i>
+    </button>
+  </div>
 </div>

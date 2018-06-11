@@ -1,0 +1,106 @@
+.post-box {
+  position: relative;
+  float: left;
+  width: 100%;
+  margin: 15px 0;
+  box-shadow: 0 3px 3px 3px rgba(0, 0, 0, 0.05);
+  background-color: #FEFEFE;
+  h3 {
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    padding-top: 10px;
+    margin-bottom: 15px;
+  }
+  .input-group {
+    padding-top: 15px;
+    position: relative;
+    width: 100%;
+    height: 50px;
+    input {
+      box-sizing: border-box;
+      position: relative;
+      padding: 10px 5px 0 5px;
+      background-color: transparent !important;
+      width: calc(100% - 10px);
+      margin: 0 5px;
+    }
+    label {
+      position: absolute;
+      top: 24px;
+      left: 10px;
+      transition: all 0.3s ease;
+    }
+    label.rise, input:focus ~ label {
+      top: -7px;
+      left: 5px;
+    }
+  }
+  .file-upload {
+    padding-top: 15px;
+    position: relative;
+    width: calc(100% - 10px);
+      margin: 0 5px;
+    height: 50px;
+    input {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      cursor: pointer;
+      z-index: 9999;
+    }
+    label {
+      height: 100%;
+      width: 100%;
+      box-sizing: border-box;
+      background-color: #cccccc;
+      color: #333;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 16px;
+      border: 3px dashed #FEFEFE;
+    }
+  }
+  .text-box {
+    height: 200px;
+    width: 100%;
+    position: relative;
+    margin-top: 10px;
+    textarea {
+      position: relative;
+      width: calc(100% - 20px);
+      margin: 0 7px;
+      height: 190px;
+      box-shadow: inset 0 3px 3px 3px rgba(0, 0, 0, 0.05);
+    }
+  }
+  .button-track {
+    width: calc(100% - 10px);
+    margin: 15px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 75px;
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 15px;
+      background-color: #FEFEFE;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 3px 3px 3px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+      height: 50px;
+      width: 125px;
+      font-size: 18px;
+    }
+  }
+}

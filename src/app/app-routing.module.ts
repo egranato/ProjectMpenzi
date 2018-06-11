@@ -10,6 +10,9 @@ import { PlaceFeedComponent } from './components/posts/archive/places/place-feed
 import { DateFeedComponent } from './components/posts/archive/dates/date-feed/date-feed.component';
 import { AboutComponent } from './components/about/about.component';
 import { AdminComponent } from './components/admin/admin.component';
+import { WorkspaceComponent } from './components/admin/workspace/workspace.component';
+import { NewPostComponent } from './components/admin/workspace/new-post/new-post.component';
+import { EditComponent } from './components/admin/workspace/edit/edit.component';
 
 const routes: Routes = [
   {
@@ -63,6 +66,25 @@ const routes: Routes = [
   {
     path: 'admin',
     component: AdminComponent
+  },
+  {
+    path: 'workspace',
+    component: WorkspaceComponent,
+    children: [
+      {
+        path: '',
+        redirectTo: 'post',
+        pathMatch: 'full'
+      },
+      {
+        path: 'post',
+        component: NewPostComponent
+      },
+      {
+        path: 'info',
+        component: EditComponent
+      }
+    ]
   },
   {
     path: '**',

@@ -21,7 +21,12 @@
       "styles": [
         "styles.scss"
       ],
-      "scripts": [],
+      "scripts": [
+        "assets/JS/azure-storage.blob.min.js",
+        "assets/JS/azure-storage.file.min.js",
+        "assets/JS/azure-storage.queue.min.js",
+        "assets/JS/azure-storage.table.min.js"
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",

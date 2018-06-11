@@ -140,8 +140,13 @@ body {
   height: 100%;
   width: 100%;
   overflow: hidden;
-  background-color: #FEFEFE;
+  background: rgb(255,251,242);
+  background: linear-gradient(40deg, rgba(255,251,242,1) 51%, rgba(255,244,224,1) 100%);
   * {
     font-family: 'Poppins', sans-serif;
   }
+}
+
+.buffer-bottom {
+  margin-bottom: 70px !important;
 }
