@@ -16,6 +16,7 @@ export class NewPostComponent implements OnInit {
   constructor(private api: ApiService, private router: Router) { }
   @ViewChild('image') image;
   ngOnInit() {
+    this.api.checkToken();
     this.image.nativeElement.onchange = ($event) => {
       this.api
         .sendImage($event.target.files[0])
