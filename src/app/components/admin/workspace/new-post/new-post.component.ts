@@ -13,17 +13,25 @@ import { Router } from '@angular/router';
 })
 export class NewPostComponent implements OnInit {
   public post: Post;
-  constructor(private api: ApiService, private router: Router) { }
+  public imageupload: string;
+  private error: boolean;
+  constructor(
+    private api: ApiService,
+    private router: Router
+  ) { }
   @ViewChild('image') image;
   ngOnInit() {
     this.api.checkToken();
     this.image.nativeElement.onchange = ($event) => {
+      this.imageupload = null;
       this.api
         .sendImage($event.target.files[0])
         .then((result: any) => {
           this.post.image = result.url;
+          this.imageupload = 'success';
         }).catch((error) => {
           console.error(error);
+          this.imageupload = 'failure';
         });
     };
     this.post = {
@@ -45,7 +53,14 @@ export class NewPostComponent implements OnInit {
         },
         (failure: any) => {
           console.error(failure);
+          this.showError();
         }
       );
+  }
+  public hideError(): void {
+    this.error = false;
+  }
+  private showError(): void {
+    this.error = true;
   }
 }

@@ -1,3 +1,20 @@
-<p>
-  edit works!
-</p>
+<div class="post-box">
+  <h3>Change Welcome</h3>
+  <div class="input-group">
+    <input type="text" name="title" [(ngModel)]="author.welcome">
+    <label for="title" [class.rise]="author.welcome?.length !== 0">Welcome</label>
+  </div>
+  <div class="file-upload">
+    <input type="file" name="image" #image>
+    <label for="image">Image Upload</label>
+  </div>
+  <div class="text-box">
+    <textarea name="body" [(ngModel)]="author.body" placeholder="Body"></textarea>
+  </div>
+  <div class="button-track">
+    <button (click)="updateAuthor()">
+      <p>Update</p>
+      <i class="fas fa-paper-plane"></i>
+    </button>
+  </div>
+</div>

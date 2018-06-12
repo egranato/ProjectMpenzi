@@ -8,9 +8,11 @@
     <input type="text" name="place" [(ngModel)]="post.place">
     <label for="place" [class.rise]="post.place?.length !== 0">Place</label>
   </div>
-  <div class="file-upload">
+  <div class="file-upload" [class.uploaded]="imageupload === 'success'" [class.failed]="imageupload === 'failure'">
     <input type="file" name="image" #image>
-    <label for="image">Image Upload</label>
+    <label for="image" *ngIf="imageupload === 'success'">Uploaded</label>
+    <label for="image" *ngIf="!imageupload">Image Upload</label>
+    <label for="image" *ngIf="imageupload === 'failure'">Failed</label>
   </div>
   <div class="text-box">
     <textarea name="body" [(ngModel)]="post.body" placeholder="Body"></textarea>
@@ -20,6 +22,11 @@
       <p>Post</p>
       <i class="fas fa-paper-plane"></i>
     </button>
+  </div>
+  <div class="error-box" *ngIf="error">
+    <h3>There was a problem completing your post.</h3>
+    <p>Please refresh or try again later.</p>
+    <button>Okay</button>
   </div>
 </div>
 <div class="post buffer-bottom">
