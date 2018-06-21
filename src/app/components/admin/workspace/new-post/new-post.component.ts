@@ -52,8 +52,13 @@ export class NewPostComponent implements OnInit {
           this.router.navigate(['/posts', result]);
         },
         (failure: any) => {
-          console.error(failure);
-          this.showError();
+          if (failure.status === 401) {
+            localStorage.removeItem('pmin-vl');
+            this.router.navigate(['/admin']);
+          } else {
+            console.error(failure);
+            this.showError();
+          }
         }
       );
   }

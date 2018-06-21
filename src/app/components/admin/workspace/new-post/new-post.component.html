@@ -26,7 +26,7 @@
   <div class="error-box" *ngIf="error">
     <h3>There was a problem completing your post.</h3>
     <p>Please refresh or try again later.</p>
-    <button>Okay</button>
+    <button (click)="hideError()">Okay</button>
   </div>
 </div>
 <div class="post buffer-bottom">

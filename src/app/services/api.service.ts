@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Response } from '@angular/http';
-import { catchError, retry, retryWhen } from 'rxjs/operators';
-import 'rxjs/add/operator/retryWhen';
+import { retry } from 'rxjs/operators';
 import { environment } from '../../environments/environment';
 import { Router } from '@angular/router';
 import { Post } from '../data/post';
+import { Author } from '../data/author';
 declare const AzureStorage: any;
 
 @Injectable()
@@ -75,6 +75,12 @@ export class ApiService {
       .pipe(retry(3));
   }
 
+  public updateAuthor(author: Author) {
+    return this.http
+      .post<Response>(`${environment.apiUrl}/admin/author`, { author }, this.getAuthHeaders())
+      .pipe(retry(3));
+  }
+
   private uploadImageToAzure(image: any) {
     return new Promise((resolve, reject) => {
       const controller = this;
@@ -127,6 +133,7 @@ export class ApiService {
     if (localStorage.getItem('pmin-vl')) {
       return;
     } else {
+      localStorage.removeItem('pmin-vl');
       this.router.navigate(['/admin']);
     }
   }

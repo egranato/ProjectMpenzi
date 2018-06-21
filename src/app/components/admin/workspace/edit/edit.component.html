@@ -4,9 +4,11 @@
     <input type="text" name="title" [(ngModel)]="author.welcome">
     <label for="title" [class.rise]="author.welcome?.length !== 0">Welcome</label>
   </div>
-  <div class="file-upload">
+  <div class="file-upload" [class.uploaded]="imageupload === 'success'" [class.failed]="imageupload === 'failure'">
     <input type="file" name="image" #image>
-    <label for="image">Image Upload</label>
+    <label for="image" *ngIf="imageupload === 'success'">Uploaded</label>
+    <label for="image" *ngIf="!imageupload">Image Upload</label>
+    <label for="image" *ngIf="imageupload === 'failure'">Failed</label>
   </div>
   <div class="text-box">
     <textarea name="body" [(ngModel)]="author.body" placeholder="Body"></textarea>
@@ -16,5 +18,10 @@
       <p>Update</p>
       <i class="fas fa-paper-plane"></i>
     </button>
+  </div>
+  <div class="error-box" *ngIf="error">
+    <h3>There was a problem completing your update.</h3>
+    <p>Please refresh or try again later.</p>
+    <button (click)="hideError()">Okay</button>
   </div>
 </div>

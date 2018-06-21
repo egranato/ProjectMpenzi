@@ -9,7 +9,9 @@ import { Author } from '../../data/author';
 })
 export class AboutComponent implements OnInit {
   public author: Author;
-  constructor(private api: ApiService) { }
+  constructor(private api: ApiService) {
+    this.author = new Author();
+  }
 
   ngOnInit() {
     this.api

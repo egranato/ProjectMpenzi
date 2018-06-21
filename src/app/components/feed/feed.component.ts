@@ -24,7 +24,12 @@ export class FeedComponent implements OnInit {
   public openPlace(id: number): void {
     this.router.navigate(['/posts', 'places', id]);
   }
-
+  public share(id: number | string): void {
+    window.open(
+      `https://www.facebook.com/sharer.php?u=http://www.projectmpenzi.com/posts/${id}`,
+      '_blank'
+    );
+  }
   ngOnInit() {
     this.posts = [];
     this.api.getFeed()
