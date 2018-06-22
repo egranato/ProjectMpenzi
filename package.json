@@ -1,6 +1,6 @@
 {
-  "name": "front-end",
-  "version": "0.0.0",
+  "name": "project-mpenzi-client",
+  "version": "1.0.0",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
