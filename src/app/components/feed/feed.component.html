@@ -20,7 +20,7 @@
       <p>{{post.body}}</p>
     </div>
   </div>
-  <div class="action-buttons">
+  <div class="action-buttons" [class.reposition]="!post?.image">
     <button class="share" (click)="share(post.id)">
       Share
       <i class="fas fa-share"></i>
